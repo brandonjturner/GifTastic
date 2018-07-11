@@ -14,7 +14,7 @@ $(document).ready(function(){
   $(document).on('click', '.expression', function() {
     var brand = $(this).html(); 
     console.log(brand);
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + brand + "&api_key=dc6zaTOxFJmzC&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + brand + "&api_key=dc6zaTOxFJmzC&limit=10";
         $.ajax({url: queryURL, method: 'GET'})
         .done(function(response) {
             var results = response.data;
