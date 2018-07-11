@@ -12,8 +12,8 @@ $(document).ready(function(){
     }    
     buttonExpress();
   $(document).on('click', '.expression', function() {
-    var car = $(this).html(); 
-    console.log(car);
+    var brand = $(this).html(); 
+    console.log(brand);
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + brand + "&api_key=dc6zaTOxFJmzC&limit=10";
         $.ajax({url: queryURL, method: 'GET'})
         .done(function(response) {
@@ -46,11 +46,11 @@ $(document).ready(function(){
     })
 $(document).on('click', '#addExpress', function(){
     if ($('#express-input').val().trim() == ''){
-      alert('please add car');
+      alert('please add a brand');
    }
    else {
-    var car = $('#express-input').val().trim();
-    topics.push(car);
+    var brand = $('#express-input').val().trim();
+    topics.push(brand);
     $('#express-input').val('');
     buttonExpress();
     return false;
